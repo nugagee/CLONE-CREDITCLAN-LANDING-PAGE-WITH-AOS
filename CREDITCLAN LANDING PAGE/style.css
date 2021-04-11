@@ -1,0 +1,946 @@
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700&family=Lobster&display=swap");
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lobster", cursive;
+  font-family: "Heebo", sans-serif;
+  list-style: none;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+  width: 100vw;
+  height: 100%;
+}
+
+.container {
+  position: relative;
+  width: 99%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+header {
+  position: fixed;
+  width: 100%;
+  height: 60px;
+  background: transparent;
+  z-index: 5;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.126);
+  transition: 0.5s;
+  color: white;
+  z-index: 1000;
+}
+header .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+
+}
+header .menu .logo img,
+footer .foot-det .credit img {
+  width: 100px;
+  height: 20px;
+  cursor: pointer;
+}
+
+header .menu .nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+header .menu .nav ul li {
+  margin: 0 10px;
+  font-size: 0.7rem;
+  padding: 0 10px;
+  font-weight: 400;
+  cursor: pointer;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+header .menu .nav .sign {
+  background: rgb(255, 119, 0);
+  padding: 3px 15px;
+  border-radius: 5px;
+  color: white;
+  transition: 0.2s ease;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.187);
+}
+header .menu .nav .sign:hover {
+  transform: translateY(-5px);
+}
+header .menu .nav ul > li > ul {
+  position: absolute;
+  display: block;
+  background: white;
+  opacity: 0;
+  left: -5px;
+  top: 25px;
+  width: ;
+  border-radius: 5px;
+  margin: 0 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.187);
+  transform: translateY(70px);
+  visibility: hidden;
+  transition: 0.9s ease;
+}
+header .menu .nav ul > li > ul > li {
+  display: block;
+  padding: 5px;
+  font-size: 0.7rem;
+  width: 150px;
+}
+header .menu .nav ul > li > ul > li:hover {
+  color: rgb(255, 119, 0);
+}
+header .menu .nav ul li:hover ul {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+}
+header .menu .nav ul > li > ul:hover {
+  visibility: visible;
+  opacity: 1;
+}
+header .menu .hamburger i {
+    font-size: 20px;
+    color: rgb(150, 4, 150);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  header .menu .hamburger i:hover {
+    transform: scale(1.1);
+  }
+  .hamburger {
+    display: none;
+  }
+  .secondary {
+      background: white;
+      color: black;
+  }
+/*-------------------------SVG Section----------------------------------*/
+#home {
+  position: relative;
+  min-height: 601px;
+  background: #eaf5ff;
+  padding: 100px 0 50px 0;
+}
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 521px;
+  background: rgb(25, 25, 57);
+  left: -20%;
+  top: 0;
+  transform: skew(-35deg);
+  border-radius: 0 0 150px 0;
+}
+#home .landing .land-det .animate {
+  color: rgb(255, 119, 0);
+}
+.landing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.landing .land-det {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+.landing .land-det h2 {
+  font-size: 2.5rem;
+  color: white;
+  line-height: 45px;
+}
+.landing .land-det p {
+  margin: 15px 0;
+  color: white;
+  max-width: 450px;
+  font-weight: 300;
+}
+/*----------BTN-SEC-----*/
+.landing .land-det .btn,
+#home .land-b .btn,
+.simp2 .sim2-det .btn,
+.key-foc .key .btn,
+.simp .btn,
+.cred .btn,
+.bank .bank-det .btn,
+.join .btn {
+  background: rgb(255, 119, 0);
+  padding: 5px 20px;
+  border-radius: 5px;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.187);
+}
+.landing .land-det .btn:hover,
+#home .land-b .btn:hover,
+.key-foc .key .btn:hover,
+.simp2 .sim2-det .btn:hover,
+.simp .btn:hover,
+.cred .btn:hover,
+.bank .bank-det .btn:hover,
+.join .btn:hover {
+  transform: scale(1.1);
+}
+.landing .svg-sec {
+  flex-basis: 60%;
+  flex-grow: 1;
+}
+.landing .svg-sec img {
+  width: 550px;
+  height: 350px;
+  animation: FlipUp 5s linear 0s infinite alternate;
+}
+@keyframes FlipUp {
+  0% {
+    transform: translateY(0px);
+  }
+  25% {
+    transform: translateY(-10px);
+  }
+
+  75% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateX(0px);
+  }
+}
+#home .land-b {
+  position: relative;
+  margin-top: 80px;
+  display: flex;
+  justify-content: flex-end;
+}
+/*-------BTN SEC----*/
+#home .land-b .btn,
+.simp2 .sim2-det .btn,
+.key-foc .key .btn,
+.simp .btn,
+.cred .btn,
+.bank .bank-det .btn,
+.join .btn {
+  background: #0073b1;
+}
+#home .land-b p {
+  margin: 0 30px;
+}
+/*------------------------Key Focus---------*/
+.key-foc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0;
+}
+.key-foc .key {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+.key-foc .key h3,
+.simp .sim-det h3,
+.simp2 .sim2-det h3,
+.bene h3,
+.cred .cred-det h3,
+.bank .bank-det h3,
+.dev-sec .dev-det h3,
+.owl-sec .owl h3 {
+  display: inline-block;
+  font-weight: 400;
+  margin: 20px 0;
+  font-size: 1rem;
+  position: relative;
+}
+.key-foc .key h3::after,
+.simp .sim-det h3::after,
+.simp2-sec .sim2-det h3::after,
+.bene h3::after,
+.cred .cred-det h3::after,
+.bank .bank-det h3::after,
+.dev-sec .dev-det h3::after,
+.owl-sec .owl h3::after {
+  content: "";
+  position: absolute;
+  height: 0.1px;
+  width: 50px;
+  background: black;
+  right: -70px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.key-foc .key h2,
+.simp .sim-det h2,
+.simp2 .sim2-det h2,
+.bene h2,
+.cred h2,
+.bank .bank-det h2,
+.dev-sec .dev-det h2,
+.owl-sec .owl h2 {
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+.key-foc .key p,
+.simp .sim-det p,
+.dev-sec .dev-det p {
+  margin: 20px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+.key-foc .key-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  grid-template-rows: auto;
+}
+.key-card .card {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.187);
+  border-radius: 10px;
+  padding: 40px 30px;
+  background: #f8fafc;
+  cursor: pointer;
+  width: 250px;
+  position: relative;
+  overflow: hidden;
+}
+.key-card .card::after {
+  content: "";
+  position: absolute;
+  background: #0073b1;
+  right: 0;
+  top: 0;
+  height: 50px;
+  width: 85px;
+  border-radius: 0 0 0 30px;
+  transform: translateX(110%);
+  transition: 0.5s;
+}
+.key-card .card:hover::after {
+  transform: translateX(0);
+}
+.key-card .card i {
+  padding: 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.187);
+  color: #fb8627;
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  transition: 0.5s;
+}
+.key-card .card:hover i {
+  background: #0073b1;
+  color: white;
+}
+.key-card .card h2 {
+  font-size: 0.8rem;
+}
+.key-card .card p {
+  font-size: 0.8rem;
+  margin: 10px 0;
+  font-weight: 300;
+  max-width: 250px;
+}
+/*----------------------SIMPLIFIED Sec----------*/
+.simp-sec {
+  background: #f8fafc;
+}
+.simp,
+.simp2,
+.cred,
+.bank,
+.dev {
+  display: flex;
+  padding: 100px 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.simp .simp-ima,
+.simp2 .simp2-ima,
+.cred-ima,
+.bank .bank-ima,
+.dev .dev-ima {
+  flex-basis: 50%;
+  flex-grow: 1;
+}
+.simp .simp-ima img,
+.simp2 .simp2-ima img {
+  width: 80%;
+  border-radius: 3px;
+}
+.simp .sim-det,
+.simp2 .sim2-det,
+.cred .cred-det,
+.bank .bank-det {
+  margin: 0 20px;
+}
+.simp .sim-det p,
+.cred .cred-det p,
+.bank .bank-det p {
+  font-size: 0.8rem;
+  max-width: 400px;
+  padding-left: 30px;
+  position: relative;
+}
+.simp .sim-det p::before,
+.cred .cred-det p::before,
+.bank .bank-det p::before {
+  content: "";
+  height: 12px;
+  width: 12px;
+  background: url("/CREDIT CLAN/tick.png") no-repeat center / cover;
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin-top: 5px;
+}
+/*----------------------SIMPLIFIED 2 Sec----------*/
+.simp2-sec {
+  background: white;
+}
+.simp2 .sim2-para {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 30px;
+  grid-template-rows: auto;
+  margin: 40px 0;
+}
+.simp2 .sim2-para .para-card {
+  width: 210px;
+}
+.simp2 .sim2-para .para-card img {
+  width: 30px;
+  height: 30px;
+}
+.simp2 .sim2-para .para-card p span {
+  font-weight: 600;
+}
+.simp2 .sim2-para .para-card p {
+  font-size: 0.8rem;
+}
+/*------------------BENEFIT SEC-----------*/
+.bene-sec {
+  background: #f8fafc;
+  padding: 100px 0;
+}
+.bene .bene-card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.bene .bene-card .card {
+  flex-basis: 23%;
+  flex-grow: 1;
+  padding: 5px 20px 5px 0;
+  margin-right: 5px;
+}
+.bene .bene-card .card .sv-ima {
+  width: 45px;
+  height: 45px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.187);
+  border-radius: 5px;
+  display: grid;
+  place-items: center;
+  margin: 15px 0;
+}
+.bene .bene-card .card img {
+  width: 25px;
+  height: 25px;
+}
+.bene .bene-card .card h4 {
+  font-size: 0.8rem;
+}
+.bene .bene-card .card p {
+  font-size: 0.8rem;
+  margin: 15px 0;
+}
+/*------------CREDDIBILITY SEC----------*/
+.cred,
+.dev {
+  position: relative;
+  background: url("/CREDIT CLAN/white.jpg") no-repeat center / cover;
+  background-attachment: fixed;
+  min-height: 120vh;
+}
+.cred::after {
+  content: "CRED";
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  font-size: 10rem;
+  color: #f8fafc;
+  user-select: none;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.cred .cred-det p,
+.bank .bank-det p {
+  margin: 20px 0;
+  font-weight: 300;
+  z-index: 15;
+}
+.cred .cred-det .btn,
+.bank .bank-det .btn {
+  margin: 30px 0;
+}
+/*------------------BANK SEC------------*/
+.bank-sec {
+  background: #f8fafc;
+}
+.bank-sec .bank {
+  flex-direction: row-reverse;
+}
+.bank-sec .bank .bank-ima img {
+  width: 100%;
+}
+/*----------------DEV SEC--------------*/
+.dev::after {
+  content: "700";
+  position: absolute;
+  right: -10%;
+  top: 50%;
+  font-size: 10rem;
+  color: #f8fafc;
+  user-select: none;
+  pointer-events: none;
+  transform: translateY(-50%);
+}
+.dev .dev-det {
+  flex-basis: 50%;
+  margin: 0 40px;
+  z-index: 2;
+}
+.dev textarea {
+  width: 90%;
+  height: 400px;
+  background: #002240;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: green;
+  font-size: 0.7rem;
+  resize: none;
+  border: 2px solid #002240;
+  padding: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.674);
+  z-index: 5;
+}
+/*--------------OWl SEC----------*/
+.owl-sec {
+  background: #f8fafc;
+  padding: 100px 0;
+}
+.owl .card {
+  display: grid;
+  place-items: center;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.091);
+  padding: 20px 0;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+.owl .card img {
+    height: 30px;
+}
+/*--------------------JOIN SEC----------*/
+.join {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  position: relative;
+  overflow: hidden;
+}
+.join::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -10%;
+  background: url("/CREDIT CLAN/CREDIT\ CLAN\ fade-background.jpg") no-repeat
+    center / cover;
+  height: 100%;
+  width: 70%;
+}
+.join::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  left: -32%;
+  background: url("/CREDIT CLAN/CREDIT\ CLAN\ round-bg.png") no-repeat center /
+    cover;
+  background-size: 27%;
+  height: 100%;
+  width: 70%;
+}
+.join-det {
+  margin-right: 100px;
+}
+.join-det h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.join-det p {
+  font-weight: 300;
+  color: #0073b1;
+}
+.join-det p span {
+  font-weight: 700;
+}
+/*------------------FOOTER SEC ---------*/
+footer {
+    background: linear-gradient(rgba(252, 252, 252, 0.948), rgba(255, 255, 255, 0.955)), url("/CREDIT CLAN/orang.jpg") repeat center / cover;
+}
+footer .foot-det {
+  padding: 70px 0;
+}
+footer .foot-det {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+footer .foot-det h2 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+footer .foot-det p {
+  font-size: 0.7rem;
+  font-weight: 300;
+  margin: 10px 0;
+  cursor: pointer;
+}
+footer .foot-det .cont .soc i {
+  margin-right: 15px;
+  padding: 10px;
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.194);
+}
+footer .foot hr {
+  opacity: 0.4;
+}
+footer .foot .cop {
+  margin: 20px 0;
+  font-weight: 300;
+  font-size: 0.7rem;
+}
+footer .up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #0073b1;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.297);
+  border-radius: 50%;'
+  height: 40px;
+  width: 40px;
+  padding: 10px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  z-index: 100;
+}
+footer .up i {
+  color: white;
+
+}
+/*=================RESPONSIVENESS===========*/
+@media only screen and (max-width: 380px) {
+    .particles {
+        left: 0;
+        transform: skew(0deg);
+        border-radius: 0 0 0 0;
+        height: 750px;
+      }
+      .landing {
+          flex-direction: column-reverse;
+      }
+      .landing .svg-sec {
+          flex-basis: 50%;
+          margin-bottom: 50px;
+      }
+      .landing .svg-sec img {
+          width: 300px;
+          height: 280px;
+      }
+      .landing .land-det {
+          padding: 5px 20px;
+      }
+      .landing .land-det h2 {
+          font-size:1.8rem;
+
+      }
+      #home .land-b {
+          justify-content: space-between;
+          padding: 5px 20px;
+      }
+      #home .land-b p {
+          max-width: 150px;
+          margin: 0 10px;
+      }
+      #home .land-b .btn {
+          flex-basis: 50%;
+          padding: 0px 2px;
+          font-size: 1.2rem;
+          transform: scale(0.7);
+      }
+      .key-foc, .simp,
+      .simp2,
+      .cred,
+      .bank,
+      .dev, .bank-sec .bank, .join, footer .foot-det {
+          flex-direction: column;
+          padding: 50px 10px;
+      }
+      .key, .simp .sim-det,
+      .simp2 .sim2-det,
+      .cred .cred-det,
+      .bank .bank-det, .bank .bank-ima {
+          margin-bottom: 30px;
+          flex-basis: 100%;
+      }
+      .key-foc .key-card, .simp2 .sim2-para {
+          grid-template-columns: repeat(1,1fr);
+      }
+      .bene .bene-card .card, .dev .dev-det, .dev textarea {
+          flex-basis: 100%;
+      }
+      .bene-sec, .dev-sec .dev, .owl-sec  {
+          padding: 50px 10px;
+      }
+      .bene .bene-card .card .sv-ima {
+          width: 50px;
+          height: 50px;
+      }
+      .cred::after, .dev::after {
+          top: 60%
+      }
+      .cred .cred-ima {
+          transform: scale(0.9);
+      }
+      .cred .cred-det {
+          z-index: 5;
+      }
+      .dev textarea {
+          width: 250px;
+          z-index: 5;
+      }
+      .dev::after {
+          z-index: 1;
+          top: 70%
+      }
+      
+      .owl-sec .owl h2, .owl-sec .owl h3 {
+          transform: scale(0.9);
+      }
+      .owl .card {
+          padding: 20px 20px;
+          margin: 10px 20px;
+      }
+      .join .join-det {
+          flex-basis: 100%;
+          width: 100%;
+          z-index: 5;
+          margin: 5px 20px;
+          margin-bottom: 40px;
+      }
+      .join .btn {
+          z-index: 5;
+      }
+      .join::after {
+          top: 40%;
+          left: -30%;
+          background-size: 50%;
+          z-index: -1;
+      }
+      .join, footer .foot-det {
+          flex-basis: 100%;
+          width: 100%;
+          align-items: flex-start;
+      }
+}
+/*=================RESPONSIVENESS 760===========*/
+@media only screen and (max-width: 760px) {
+    header .menu {
+        padding: 0 30px;
+    }
+    header .menu .nav {
+        display:none;
+    transition: all .5s ease-in-out;
+
+    }
+    header .menu .nav.active {
+        position: absolute;
+        top: 40px;
+        left: 0;
+        width: 100vw;
+        height: 70vh;
+        background: white;
+        z-index: 30000 !important;
+        border-top: 1px solid purple;
+        padding: 20px;
+        display: block;
+        transition: 0.3s;
+
+      }
+      header .menu .nav ul {
+          flex-direction: column;
+          height: 100%;
+          width: 100%;
+    transition: all .5s ease-in-out;
+
+      }
+      header .menu .nav ul li {
+          display: inline-flex;
+          justify-content: space-between;
+          width: 100%
+      }
+      header .menu .nav ul > li:hover {
+          padding-bottom: 50px;
+      }
+      header .menu .nav ul i {
+          margin: 0 20px;
+          position: relative;
+      }
+      header .menu .nav ul > li > ul {
+          left: 30px;
+          background: transparent;
+          box-shadow: none;
+      }
+      header .menu .nav .sign {
+          display: inline-block;
+      }
+    header .menu .hamburger {
+        display: flex;
+    }
+    .particles {
+        left: 0;
+        transform: skew(0deg);
+        border-radius: 0 0 0 0;
+        height: 750px;
+      }
+      .landing {
+          flex-direction: column-reverse;
+      }
+      .landing .svg-sec {
+          flex-basis: 50%;
+          margin-bottom: 50px;
+      }
+      .landing .svg-sec img {
+          width: 300px;
+          height: 280px;
+      }
+      .landing .land-det {
+          padding: 5px 20px;
+      }
+      .landing .land-det h2 {
+          font-size:2.1rem;
+
+      }
+      #home .land-b {
+          justify-content: space-between;
+          padding: 5px 20px;
+      }
+      #home .land-b p {
+          max-width: 200px;
+          margin: 0 10px;
+      }
+      #home .land-b .btn {
+          flex-basis: 50%;
+          padding: 0px 2px;
+          font-size: 1.2rem;
+          transform: scale(0.9);
+      }
+      .key-foc, .simp,
+      .simp2,
+      .cred,
+      .bank,
+      .dev, .bank-sec .bank, footer .foot-det, .join {
+          flex-direction: column;
+          padding: 50px 10px;
+      }
+      .key, .simp .sim-det,
+      .simp2 .sim2-det,
+      .cred .cred-det,
+      .bank .bank-det  {
+          margin-bottom: 30px;
+          flex-basis: 100%;
+      }
+      .bank .bank-ima {
+        margin-bottom: 30px;
+        flex-basis: 70%;
+        transform: scale(0.8);
+      }
+      .key-foc .key-card, .simp2 .sim2-para {
+          grid-template-columns: repeat(1,1fr);
+      }
+      .key-foc .key-card .card {
+          width: 180px;
+      }
+      .bene .bene-card .card {
+        flex-basis: 40%;
+      }
+      .dev .dev-det, .dev textarea {
+          flex-basis: 100%;
+      }
+      .bene-sec, .dev-sec .dev, .owl-sec  {
+          padding: 50px 10px;
+      }
+      .bene .bene-card .card .sv-ima {
+          width: 50px;
+          height: 50px;
+      }
+      .cred::after, .dev::after {
+          top: 60%
+      }
+      .cred .cred-ima {
+          transform: scale(0.9);
+      }
+      .cred .cred-det {
+          z-index: 5;
+      }
+      .dev textarea {
+          width: 290px;
+          z-index: 5;
+      }
+      .dev::after {
+          z-index: 1;
+          top: 70%
+      }
+      
+
+
+      .join .join-det {
+          flex-basis: 50%;
+          width: 100%;
+          z-index: 5;
+          margin: 5px 20px;
+          margin-bottom: 40px;
+      }
+      .join .btn {
+          z-index: 5;
+      }
+      .join::after {
+          top: 40%;
+          left: -30%;
+          background-size: 50%;
+          z-index: -1;
+      }
+      footer .foot-det {
+        flex-basis: 100%;
+        width: 100%;
+        align-items: flex-start;
+    }
+}
+
+     
